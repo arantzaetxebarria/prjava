@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    enviroment {
+        NOMBRE="Arantza"
+    }
    
     stages {
         stage('Compilar') {
@@ -10,6 +13,16 @@ pipeline {
         stage('Ejecutar') {
             steps {
                 sh 'java Simple'
+            }
+        }
+        stage('Compilar con parametros') {
+            steps {
+                sh 'javac Simple.java'
+            }
+        }
+        stage('Ejecutar con parametros') {
+            steps {
+                sh 'java Simple $(NOMBRE)'
             }
         }
     }
