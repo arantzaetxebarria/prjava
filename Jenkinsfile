@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Compilar') {
             steps {
-                javac Param.java
+                javac Simple.java
             }
         }
         stage('Ejecutar') {
             steps {
-                java Param
+                java Simple
             }
         }
     }
