@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Compilar') {
             steps {
-                javac Simple.java
+                sh 'javac Simple.java'
             }
         }
         stage('Ejecutar') {
             steps {
-                java Simple
+                sh 'java Simple'
             }
         }
     }
