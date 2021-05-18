@@ -30,5 +30,12 @@ pipeline {
                 sh 'java Param ${NOMBRE}'
             }
         }
+        /*stage('nombreMaquina'){
+            steps{
+            echo "Y aquí visualizeo el nombre de la maquina "
+            sh 'javac Maquina.java'
+            sh 'java Maquina ${MAQUINA}'
+            }
+       }*/
     }
 }
