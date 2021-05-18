@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Ejecutar con parametros') {
             steps {
-                sh 'java Param $(NOMBRE)'
+                sh 'java Param ${NOMBRE}'
             }
         }
     }
