@@ -17,12 +17,12 @@ pipeline {
         }
         stage('Compilar con parametros') {
             steps {
-                sh 'javac Simple.java'
+                sh 'javac Param.java'
             }
         }
         stage('Ejecutar con parametros') {
             steps {
-                sh 'java Simple $(NOMBRE)'
+                sh 'java Param $(NOMBRE)'
             }
         }
     }
