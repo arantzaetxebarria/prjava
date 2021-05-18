@@ -2,6 +2,11 @@ pipeline {
     agent any
     environment  {
         NOMBRE = "Arantza"
+        MAQUINA = """${sh(
+        returnStdout: true,
+        script: 'uname -n'
+        )
+        }"""
     }
    
     stages {
